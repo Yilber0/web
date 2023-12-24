@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(https://i.pinimg.com/originals/fc/a3/3f/fca33f325c82e5d9faa4d85913028b1d.jpg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            
+        }
+
+        .ventana-bienvenida {
+            background: #000000;
+            padding: 50px;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 500px;
+           height: 400px;
+           font-size: 20px;
+        }
+        .ventana-bienvenida h2{
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: antiquewhite;
+        }
+        .ventana-bienvenida h3{
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: antiquewhite;
+        }
+
+
+        .formulario {
+            margin-top: 20px;
+        }
+
+        .formulario label {
+            display: block;
+            margin-bottom: 10px;
+            color: #07f7af; /* Texto negro */
+        }
+
+        .formulario input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        .formulario button {
+            background-color: #003523;
+            color: #ffffff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .formulario button:hover {
+            background-color: #00ff95;
+        }
+        .ventana-bienvenida{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ventana-bienvenida">
+        <h2 style="color: #ffffff;">Bienvenido a</h2>
+             <h3>🍦HOMECREAM🍦</h3>
+        <p style="color: rgb(255, 255, 255);">Por favor, ingresa tus datos:</p>
+    
+        <div class="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" placeholder="Ingresa tu correo electrónico">
+
+            
+            <!-- Cambio en el botón para pasar el nombre a la función ingresar -->
+            <button onclick="ingresar(document.getElementById('nombre').value)">Ingresar</button>
+        </div>
+    </div>
+
+    <script>
+        function ingresar(nombre) {
+            // Puedes agregar lógica adicional para procesar la información del formulario si es necesario
+            alert('¡Bienvenido! ' + nombre +'Datos ingresados correctamente.');
+    
+            // Redireccionar a la página deseada
+            window.location.href = 'https://www.img2go.com/es/result#j=3147ddf6-c3c2-4e96-b3e1-620aec9ec806';
+        }
+
+        // Recuperar datos almacenados al cargar la página (si existen)
+        window.onload = function() {
+            var nombreAlmacenado = localStorage.getItem('nombre');
+            var correoAlmacenado = localStorage.getItem('correo');
+
+            // Puedes usar estos valores como desees, por ejemplo, para prellenar el formulario
+            if (nombreAlmacenado && correoAlmacenado) {
+                document.getElementById('nombre').value = nombreAlmacenado;
+                document.getElementById('correo').value = correoAlmacenado;
+            }
+        };
+         
+        
+        
+    </script>
+    
+</body>
+</html>
